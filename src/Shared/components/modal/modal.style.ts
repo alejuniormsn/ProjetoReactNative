@@ -4,7 +4,7 @@ import {Icon} from '../icon/icon';
 
 export const ModalContainer = styled.View`
   position: absolute;
-  padding: 16px;
+  padding: 20px;
   margin: 8px;
   bottom: 0;
   height: 200px;
@@ -15,7 +15,7 @@ export const ModalContainer = styled.View`
   background-color: ${theme.colors.neutralTheme.white};
 `;
 
-export const IconCloseModal = styled(Icon)`
+export const IconClose = styled(Icon)`
   position: absolute;
   right: 24px;
   top: 24px;

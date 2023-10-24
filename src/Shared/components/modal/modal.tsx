@@ -1,4 +1,4 @@
-import {IconCloseModal, ModalContainer} from './modal.style';
+import {IconClose, ModalContainer} from './modal.style';
 import {textTypes} from '../text/textTypes';
 import {theme} from '../../themes/themes';
 import Button from '../button/button';
@@ -32,9 +32,9 @@ export function ModalReact({
           color={theme.colors.mainTheme.primary}>
           {title}
         </Text>
-        <Text>{text}</Text>
+        <Text style={{marginBottom: 20}}>{text}</Text>
         <Button title="OK" onPress={onCloseModal} />
-        <IconCloseModal name="cross" size={16} onPress={onCloseModal} />
+        <IconClose name="cross" size={16} onPress={onCloseModal} />
       </ModalContainer>
     </Modal>
   );

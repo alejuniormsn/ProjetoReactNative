@@ -2,6 +2,7 @@ import axios from 'axios';
 import {useState} from 'react';
 import {NativeSyntheticEvent, TextInputChangeEventData} from 'react-native';
 import {useUserReducer} from '../../../store/reducers/userReducer/useUserReducer';
+import {useModalReducer} from '../../../store/reducers/modalReducer/useModalReducer';
 
 export const useLogin = () => {
   const [email, setEmail] = useState('');
@@ -10,11 +11,12 @@ export const useLogin = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const {setUser} = useUserReducer();
-  const {user} = useUserReducer();
+
+  const {setModal} = useModalReducer();
 
   async function handleOnPress() {
     if (!email) {
-      setErrorMessage('Invalid credentials');
+      setErrorMessage('');
       return;
     }
 
@@ -28,9 +30,13 @@ export const useLogin = () => {
       .then(result => {
         setUser(result.data.user);
       })
-      .catch(error => {
-        setErrorMessage('Invalid credentials');
-        console.log(error);
+      .catch(() => {
+        setModal({
+          title: 'Erro',
+          text: 'Credenciais inválidas.',
+          visible: true,
+        });
+        setErrorMessage('credenciais inválidas');
       })
       .finally(() => {
         setLoading(false);
