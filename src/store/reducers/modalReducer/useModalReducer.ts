@@ -1,7 +1,7 @@
 import {GlobalModalType} from './../../../Shared/components/modal/globalModal';
 import {useDispatch} from 'react-redux';
-import {useAppSelector} from '../../hooks';
 import {setModalAction} from '.';
+import {useAppSelector} from '../..';
 
 export function useModalReducer() {
   const dispatch = useDispatch();
@@ -22,8 +22,8 @@ export function useModalReducer() {
   const {modal} = useAppSelector(state => state.modalReducer);
 
   return {
-    modal,
     closeModal,
     setModal,
+    modal,
   };
 }

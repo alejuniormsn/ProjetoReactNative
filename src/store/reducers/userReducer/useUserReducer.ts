@@ -1,7 +1,7 @@
 import {useDispatch} from 'react-redux';
-import {useAppSelector} from '../../hooks';
 import {userType} from '../../../Shared/types/userType';
 import {setUserAction} from '.';
+import {useAppSelector} from '../..';
 
 export function useUserReducer() {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ export function useUserReducer() {
   const {user} = useAppSelector(state => state.userReducer);
 
   return {
-    user,
     setUser,
+    user,
   };
 }

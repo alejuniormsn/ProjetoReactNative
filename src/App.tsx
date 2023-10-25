@@ -1,7 +1,7 @@
 import {SafeAreaView} from 'react-native';
-import Login from './modules/login';
 import {Provider} from 'react-redux';
-import store from './store';
+import {store} from './store';
+import Login from './modules/login';
 import GlobalModal from './Shared/components/modal/globalModal';
 
 export default function App() {

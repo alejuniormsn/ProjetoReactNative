@@ -16,7 +16,7 @@ export const useLogin = () => {
 
   async function handleOnPress() {
     if (!email) {
-      setErrorMessage('');
+      setErrorMessage('credenciais inválidas');
       return;
     }
 
@@ -30,10 +30,10 @@ export const useLogin = () => {
       .then(result => {
         setUser(result.data.user);
       })
-      .catch(() => {
+      .catch(erro => {
         setModal({
           title: 'Erro',
-          text: 'Credenciais inválidas.',
+          text: `${erro}`,
           visible: true,
         });
         setErrorMessage('credenciais inválidas');
