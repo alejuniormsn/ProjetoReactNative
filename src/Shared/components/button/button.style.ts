@@ -14,7 +14,7 @@ export const ButtonContainer = styled.TouchableOpacity`
 
 export const ButtonSecondary = styled(ButtonContainer)`
   border-width: 2px;
-  border-color: ${theme.colors.mainTheme.primary};
+  border-color: ${theme.colors.primary};
   background-color: transparent;
 `;
 
@@ -32,5 +32,5 @@ export const ButtonActivityIndicator = styled.ActivityIndicator`
 `;
 
 export const ButtonDisabled = styled(ButtonContainer)`
-  background-color: ${theme.colors.grayTheme.gray100};
+  background-color: ${theme.colors.gray100};
 `;

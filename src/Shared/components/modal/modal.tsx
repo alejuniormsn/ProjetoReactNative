@@ -27,9 +27,7 @@ export function ModalReact({
       }}
       {...props}>
       <ModalContainer>
-        <Text
-          type={textTypes.PARAGRAPH_BOLD}
-          color={theme.colors.mainTheme.primary}>
+        <Text type={textTypes.PARAGRAPH_BOLD} color={theme.colors.primary}>
           {title}
         </Text>
         <Text style={{marginBottom: 20}}>{text}</Text>

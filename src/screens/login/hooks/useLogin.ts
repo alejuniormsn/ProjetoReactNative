@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, {AxiosRequestConfig} from 'axios';
 import {useState} from 'react';
 import {NativeSyntheticEvent, TextInputChangeEventData} from 'react-native';
 import {useUserReducer} from '../../../store/reducers/userReducer/useUserReducer';
@@ -24,11 +24,18 @@ export const useLogin = () => {
 
     const URL = 'http://192.168.1.199:8080/auth';
     const payload = {email, password};
+    const token: AxiosRequestConfig = {
+      headers: {
+        Authorization: 'Bearer: token',
+        'Content-Type': 'application/json',
+      },
+    };
 
     await axios
       .post(URL, payload)
       .then(result => {
         setUser(result.data.user);
+        console.log('Resulte Login => ', result.data.user);
       })
       .catch(erro => {
         setModal({

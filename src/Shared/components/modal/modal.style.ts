@@ -11,8 +11,8 @@ export const ModalContainer = styled.View`
   z-index: 9;
   border-width: 2px;
   border-radius: 16px;
-  border-color: ${theme.colors.grayTheme.gray80};
-  background-color: ${theme.colors.neutralTheme.white};
+  border-color: ${theme.colors.gray80};
+  background-color: ${theme.colors.white};
 `;
 
 export const IconClose = styled(Icon)`

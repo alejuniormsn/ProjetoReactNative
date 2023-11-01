@@ -32,7 +32,7 @@ export default function Input({
       {title && (
         <View style={{marginLeft: 10}}>
           <Text
-            color={theme.colors.grayTheme.gray100}
+            color={theme.colors.gray100}
             type={textTypes.PARAGRAPH_SMALL_BOLD}>
             {title}
           </Text>
@@ -49,7 +49,7 @@ export default function Input({
           <IconEye
             name={currentSecure ? 'eye' : 'eye-blocked'}
             size={20}
-            color={theme.colors.grayTheme.gray100}
+            color={theme.colors.gray100}
             onPress={handleOnPress}
           />
         )}
@@ -58,7 +58,7 @@ export default function Input({
         <View style={{marginLeft: 10}}>
           <Text
             type={textTypes.PARAGRAPH_SMALL_REGULAR}
-            color={theme.colors.orangeTheme.orange80}>
+            color={theme.colors.orange80}>
             {errorMessage}
           </Text>
         </View>

@@ -29,7 +29,7 @@ export default function Button({
   if (disabled) {
     return (
       <ButtonDisabled {...props}>
-        {renderText(theme.colors.grayTheme.gray50)}
+        {renderText(theme.colors.gray50)}
       </ButtonDisabled>
     );
   }
@@ -55,7 +55,7 @@ export default function Button({
     case theme.buttons.buttonsTheme.secondary:
       return (
         <ButtonSecondary {...props} onPress={handleOnPress}>
-          {renderText(theme.colors.mainTheme.primary)}
+          {renderText(theme.colors.primary)}
         </ButtonSecondary>
       );
 
@@ -66,11 +66,8 @@ export default function Button({
           <ButtonGradient
             start={{x: 0.0, y: 0.0}}
             end={{x: 1.0, y: 1.1}}
-            colors={[
-              theme.colors.purpleTheme.purple80,
-              theme.colors.pinkTheme.pink80,
-            ]}>
-            {renderText(theme.colors.neutralTheme.white)}
+            colors={[theme.colors.purple80, theme.colors.pink80]}>
+            {renderText(theme.colors.white)}
           </ButtonGradient>
         </ButtonContainer>
       );

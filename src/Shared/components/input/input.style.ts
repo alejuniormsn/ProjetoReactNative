@@ -25,11 +25,9 @@ export const InputContent = styled.TextInput<InputContentProps>`
   border-width: 2px;
   border-radius: 8px;
   border-color: ${(props: any) =>
-    props.isError
-      ? theme.colors.orangeTheme.orange80
-      : theme.colors.grayTheme.gray80};
-  color: ${theme.colors.neutralTheme.black};
-  background-color: ${theme.colors.neutralTheme.white};
+    props.isError ? theme.colors.orange80 : theme.colors.gray80};
+  color: ${theme.colors.black};
+  background-color: ${theme.colors.white};
 `;
 
 export const InputContainer = styled.View<InputContainerProps>`

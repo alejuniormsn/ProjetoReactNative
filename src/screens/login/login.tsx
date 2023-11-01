@@ -1,11 +1,11 @@
 import {Image, View} from 'react-native';
 import {LoginContainer} from './login.style';
-import Input from '../../../Shared/components/input/input';
-import Button from '../../../Shared/components/button/button';
-import Text from '../../../Shared/components/text/text';
-import {textTypes} from '../../../Shared/components/text/textTypes';
-import {theme} from '../../../Shared/themes/themes';
-import {useLogin} from '../hooks/useLogin';
+import Input from '../../Shared/components/input/input';
+import Button from '../../Shared/components/button/button';
+import Text from '../../Shared/components/text/text';
+import {textTypes} from '../../Shared/components/text/textTypes';
+import {theme} from '../../Shared/themes/themes';
+import {useLogin} from './hooks/useLogin';
 
 export default function Login() {
   const {
@@ -23,11 +23,9 @@ export default function Login() {
       <LoginContainer>
         <Image
           resizeMode="center"
-          source={require('../../../assets/images/Logo.jpg')}
+          source={require('../../../src/assets/images/Logo.jpg')}
         />
-        <Text
-          color={theme.colors.grayTheme.gray150}
-          type={textTypes.TITLE_REGULAR}>
+        <Text color={theme.colors.gray150} type={textTypes.TITLE_REGULAR}>
           Login
         </Text>
         <Input
@@ -55,7 +53,7 @@ export default function Login() {
         <Button
           type={theme.buttons.buttonsTheme.secondary}
           title="Esqueci minha senha"
-          onPress={handleOnPress}
+          onPress={() => null}
         />
       </LoginContainer>
     </View>
